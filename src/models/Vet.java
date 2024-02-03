@@ -62,9 +62,9 @@ public class Vet {
 
     public static int getCost(int ID, int index) {
         Pet pet = DataBase.getPet(ID, index);
-        String med = pet.getDiet();
-        String[] meds = med.split("&");
-        int cost = meds.length + 17;
+        String diet = pet.getDiet();
+        String[] dietList = diet.split("|");
+        int cost = dietList.length + 17;
         return cost;
     }
 }
